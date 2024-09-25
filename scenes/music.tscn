@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgipxe00vewbj"]
+
+[ext_resource type="AudioStream" uid="uid://dtx401m1l2lv1" path="res://assets/musicbyWaterflame.ogg" id="1_0vadm"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_0vadm")
+autoplay = true

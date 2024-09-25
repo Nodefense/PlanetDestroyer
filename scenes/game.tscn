@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhb3c7tgeacwi"]
+
+[ext_resource type="Texture2D" uid="uid://c0jf7fndfqmn" path="res://assets/back.png" id="1_6p7jg"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_8aged"]
+[ext_resource type="PackedScene" uid="uid://b84hmu452estl" path="res://scenes/player.tscn" id="2_8h5go"]
+[ext_resource type="PackedScene" uid="uid://cs8hqc667yh7x" path="res://scenes/obstacle.tscn" id="4_oir1g"]
+[ext_resource type="PackedScene" uid="uid://dgipxe00vewbj" path="res://scenes/music.tscn" id="5_vtasc"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(90, 23)
+script = ExtResource("1_8aged")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(80, 134.5)
+scale = Vector2(0.166016, 0.205078)
+texture = ExtResource("1_6p7jg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.665
+autostart = true
+
+[node name="Time" type="Label" parent="."]
+offset_left = -90.0
+offset_top = 269.0
+offset_right = -9.0
+offset_bottom = 292.0
+text = "Time left: 15s"
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Obstacle" parent="." instance=ExtResource("4_oir1g")]
+position = Vector2(97, 18)
+
+[node name="ScoreLeft" type="Label" parent="."]
+offset_left = 146.0
+offset_top = 269.0
+offset_right = 250.0
+offset_bottom = 292.0
+text = "Score left: 5"
+horizontal_alignment = 2
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_8h5go")]
+position = Vector2(143, 252)
+
+[node name="DestroyYourself" type="Label" parent="."]
+offset_left = 14.0
+offset_top = -23.0
+offset_right = 146.0
+text = "Destroy yourself!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Level" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 269.0
+offset_right = 112.0
+offset_bottom = 292.0
+text = "Level 1"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Music" parent="." instance=ExtResource("5_vtasc")]
+position = Vector2(75, 101)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

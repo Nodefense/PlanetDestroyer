@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c50ybrl2e0brh"
+path="res://.godot/imported/sfx_movement_portal5.wav-558856c9736dc040d994fa7442cf63fc.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Portals and Transitions/sfx_movement_portal5.wav"
+dest_files=["res://.godot/imported/sfx_movement_portal5.wav-558856c9736dc040d994fa7442cf63fc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

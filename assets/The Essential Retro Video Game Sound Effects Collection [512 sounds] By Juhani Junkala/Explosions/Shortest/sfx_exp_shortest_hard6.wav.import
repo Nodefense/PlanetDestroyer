@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dvl8bge8n4b7u"
+path="res://.godot/imported/sfx_exp_shortest_hard6.wav-a4d1172f892123b145a2cd0f9953be2b.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Explosions/Shortest/sfx_exp_shortest_hard6.wav"
+dest_files=["res://.godot/imported/sfx_exp_shortest_hard6.wav-a4d1172f892123b145a2cd0f9953be2b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

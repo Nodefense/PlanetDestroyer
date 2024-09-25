@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ncwq3bjpgmc6"
+path="res://.godot/imported/sfx_deathscream_robot4.wav-a315881ff28d2fc10aa11597d66f16bb.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Death Screams/Robot/sfx_deathscream_robot4.wav"
+dest_files=["res://.godot/imported/sfx_deathscream_robot4.wav-a315881ff28d2fc10aa11597d66f16bb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

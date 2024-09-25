@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://b84hmu452estl"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_mweop"]
+[ext_resource type="Texture2D" uid="uid://c8uvvgabnfhjj" path="res://assets/top_spaceships_sento-removebg-preview.png" id="2_xkm2t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1jj7u"]
+radius = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31836"]
+atlas = ExtResource("2_xkm2t")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtlnx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31836")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_mweop")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1jj7u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wtlnx")
+autoplay = "default"

@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://b477wtwxena7q"]
+
+[ext_resource type="Script" path="res://scripts/yes.gd" id="1_nxd1u"]
+[ext_resource type="Script" path="res://scripts/no.gd" id="2_34sb7"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="3_5kgk6"]
+
+[sub_resource type="GDScript" id="GDScript_73avk"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 315.0
+color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="Label" parent="."]
+layout_mode = 0
+offset_right = 338.0
+offset_bottom = 116.0
+text = "GAME OVER
+You could not destroy yourself in time."
+horizontal_alignment = 1
+vertical_alignment = 1
+script = SubResource("GDScript_73avk")
+
+[node name="Yes" type="Button" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 196.0
+offset_right = 254.0
+offset_bottom = 227.0
+text = "YES"
+script = ExtResource("1_nxd1u")
+
+[node name="No" type="Button" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 196.0
+offset_right = 120.0
+offset_bottom = 227.0
+text = "NO"
+script = ExtResource("2_34sb7")
+
+[node name="PlayAgain" type="Label" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 136.0
+offset_right = 222.0
+offset_bottom = 159.0
+text = "PLAY AGAIN?"
+horizontal_alignment = 1
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 284.0
+offset_right = 340.0
+offset_bottom = 315.0
+text = "Credits"
+script = ExtResource("3_5kgk6")
+
+[connection signal="pressed" from="Yes" to="Yes" method="_on_pressed"]
+[connection signal="pressed" from="No" to="No" method="_on_pressed"]
+[connection signal="pressed" from="Credits" to="Credits" method="_on_pressed"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://td18jxcjvt1p"]
+
+[ext_resource type="Script" path="res://scripts/startbutton.gd" id="1_8831q"]
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 315.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 78.0
+offset_right = 340.0
+offset_bottom = 101.0
+text = "PLANET DESTROYER"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 168.0
+offset_right = 196.0
+offset_bottom = 199.0
+text = "PLAY"
+script = ExtResource("1_8831q")
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]

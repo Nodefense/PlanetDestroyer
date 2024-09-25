@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://x8vfac4uxuew"]
+
+[ext_resource type="Script" path="res://scripts/returnbutton.gd" id="1_34i06"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 315.0
+color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Game by Leonardo Miguel Bandeira
+
+Music by Waterflame on Newgrounds
+
+Sprites by sentoo on OpenGameArt
+
+Bakground image by Westbeam on
+OpenGameArt"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 253.0
+offset_right = 207.0
+offset_bottom = 284.0
+text = "RETURN"
+script = ExtResource("1_34i06")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

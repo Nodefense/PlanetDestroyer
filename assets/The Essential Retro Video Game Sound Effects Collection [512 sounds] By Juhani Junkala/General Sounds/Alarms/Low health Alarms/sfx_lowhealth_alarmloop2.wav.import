@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1w6ho0reatw5"
+path="res://.godot/imported/sfx_lowhealth_alarmloop2.wav-3f0fa6a97fc8b9a34c5e4be9fda8c295.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Alarms/Low health Alarms/sfx_lowhealth_alarmloop2.wav"
+dest_files=["res://.godot/imported/sfx_lowhealth_alarmloop2.wav-3f0fa6a97fc8b9a34c5e4be9fda8c295.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
