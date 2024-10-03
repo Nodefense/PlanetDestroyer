@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhb3c7tgeacwi"]
+[gd_scene load_steps=7 format=3 uid="uid://bhb3c7tgeacwi"]
 
 [ext_resource type="Texture2D" uid="uid://c0jf7fndfqmn" path="res://assets/back.png" id="1_6p7jg"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_8aged"]
 [ext_resource type="PackedScene" uid="uid://b84hmu452estl" path="res://scenes/player.tscn" id="2_8h5go"]
 [ext_resource type="PackedScene" uid="uid://cs8hqc667yh7x" path="res://scenes/obstacle.tscn" id="4_oir1g"]
 [ext_resource type="PackedScene" uid="uid://dgipxe00vewbj" path="res://scenes/music.tscn" id="5_vtasc"]
+[ext_resource type="PackedScene" uid="uid://cqpbk8ilu6ub2" path="res://scenes/canvas_layer.tscn" id="6_y74le"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(90, 23)
@@ -63,5 +64,13 @@ vertical_alignment = 2
 
 [node name="Music" parent="." instance=ExtResource("5_vtasc")]
 position = Vector2(75, 101)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Controls" parent="Control" instance=ExtResource("6_y74le")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

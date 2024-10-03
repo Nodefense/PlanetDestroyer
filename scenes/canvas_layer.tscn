@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqpbk8ilu6ub2"]
+
+[ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="1_jpglc"]
+[ext_resource type="Texture2D" uid="uid://cbyo0xuorr50r" path="res://assets/flatLight22.png" id="1_mdhmx"]
+[ext_resource type="Texture2D" uid="uid://bifp3ijm00uya" path="res://assets/flatLight23.png" id="2_spgwd"]
+[ext_resource type="Script" path="res://scripts/left.gd" id="3_pwpa0"]
+
+[node name="Controls" type="CanvasLayer"]
+script = ExtResource("1_jpglc")
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2(10, 210)
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("1_mdhmx")
+texture_pressed = ExtResource("1_mdhmx")
+script = ExtResource("3_pwpa0")
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2(274, 210)
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("2_spgwd")
+texture_pressed = ExtResource("2_spgwd")
+
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
