@@ -5,7 +5,9 @@ func _on_left_pressed() -> void:
 	left_event.action = "key_left"
 	left_event.pressed = true
 	Input.parse_input_event(left_event)
-	print("LEFT")
 
 func _on_right_pressed() -> void:
-	Input.action_press("key_right")
+	var right_event = InputEventAction.new()
+	right_event.action = "key_right"
+	right_event.pressed = true
+	Input.parse_input_event(right_event)
